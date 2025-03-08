@@ -53,7 +53,7 @@ func (c *connection) Prepare(query string) (driver.Stmt, error) {
 	return c.statement(driverStmt, err, id, query)
 }
 
-// Prepare implements driver.Conn
+// Close implements driver.Conn
 func (c *connection) Close() error {
 	lvl, start := LevelDebug, time.Now()
 	err := c.Conn.Close()

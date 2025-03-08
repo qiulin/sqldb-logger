@@ -22,7 +22,7 @@ type statement struct {
 
 // Close implements driver.Stmt
 func (s *statement) Close() error {
-	lvl, start := LevelDebug, time.Now()
+	lvl, start := s.logger.opt.closerLevel, time.Now()
 	err := s.Stmt.Close()
 
 	if err != nil {

@@ -30,6 +30,7 @@ type options struct {
 	preparerLevel      Level
 	queryerLevel       Level
 	execerLevel        Level
+	closerLevel        Level
 }
 
 // setDefaultOptions called first time before Log() called (see: OpenDriver()).
@@ -56,6 +57,7 @@ func setDefaultOptions(opt *options) {
 	opt.preparerLevel = LevelInfo
 	opt.queryerLevel = LevelInfo
 	opt.execerLevel = LevelInfo
+	opt.closerLevel = LevelInfo
 }
 
 // DurationUnit is total time spent on an actual driver function call calculated by time.Since(start).
@@ -390,5 +392,11 @@ func WithQueryerLevel(lvl Level) Option {
 func WithExecerLevel(lvl Level) Option {
 	return func(opt *options) {
 		opt.execerLevel = lvl
+	}
+}
+
+func WithCloserLevel(lvl Level) Option {
+	return func(opt *options) {
+		opt.closerLevel = lvl
 	}
 }
