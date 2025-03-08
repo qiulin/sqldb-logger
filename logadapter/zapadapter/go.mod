@@ -1,9 +1,9 @@
-module github.com/simukti/sqldb-logger/logadapter/zapadapter
+module github.com/qiulin/sqldb-logger/logadapter/zapadapter
 
 go 1.17
 
 require (
-	github.com/simukti/sqldb-logger v0.0.0-20230108154142-840120f68bea
+	github.com/qiulin/sqldb-logger v0.0.0-20230108154142-840120f68bea
 	github.com/stretchr/testify v1.8.1
 	go.uber.org/zap v1.24.0
 )

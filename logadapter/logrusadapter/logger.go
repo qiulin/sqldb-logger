@@ -5,7 +5,7 @@ import (
 
 	"github.com/sirupsen/logrus"
 
-	sqldblogger "github.com/simukti/sqldb-logger"
+	sqldblogger "github.com/qiulin/sqldb-logger"
 )
 
 type logrusAdapter struct {
